@@ -12,7 +12,6 @@
   <div class="container">
     <h1>Let's find something for you to do ✌️</h1>
 
-
     <form action="/" id="form" class="form" method="POST">
       <select name="type" class="form-select">
         <option value="" data-display="Select">Random type</option>
@@ -35,7 +34,8 @@
       <button type="submit" class="form-submit">Go</button>
     </form>
     <section id="cards" class="cards">
-      <% if(locals.data) { %>
+      <% if (locals.data) { %>
+
         <article class="card-item">
           <h2 class="card-activity">
             <%= data.activity %>
@@ -53,14 +53,14 @@
             </span>
           </div>
         </article>
-        <% } %>
 
+        <% if(locals.err){%>
           <div id="tag-error" class="tag-error">
-            <% if(locals.error) { %>
-              <%= error %>
+            <%= err %>
               <%} %>
                 <!-- Show any errors that were sent from the backend -->
           </div>
+          <% } %>
 
     </section>
   </div>

@@ -127,3 +127,10 @@ h1 {
     grid-gap: 10px;
   }
 }
+
+#cards{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+}
